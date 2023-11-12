@@ -1,0 +1,49 @@
+{
+  "name": "react-vite-build",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/react-vite-build.umd.cjs",
+  "module": "./dist/react-vite-build.js",
+  "exports": {
+    "./math": {
+      "import": "./dist/math.js",
+      "require": "./dist/math.cjs",
+      "type": "./dist/math.d.ts"
+    },
+    "./logger": {
+      "import": "./dist/logger.js",
+      "require": "./dist/logger.cjs",
+      "type": "./dist/logger.d.ts"
+    }
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "dist/*",
+    "index.d.ts",
+    "logger.d.ts",
+    "math.d.ts"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
