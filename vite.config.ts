@@ -13,6 +13,9 @@ export default defineConfig({
         math: "./src/math.ts",
         logger: "./src/logger.ts",
       },
+      fileName: (format, name) => {
+        return `${name}.${format}`;
+      },
     },
   },
   plugins: [react()],
