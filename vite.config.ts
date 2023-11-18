@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   build: {
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     emptyOutDir: false,
     outDir: "dist",
     lib: {
